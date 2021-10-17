@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Drop Shadow Stack -->
+    <item>
+        <shape>
+
+            <solid android:color="#00bbbdcb" />
+            <corners
+                android:bottomLeftRadius="@dimen/margin_20dp"
+                android:bottomRightRadius="@dimen/margin_20dp"
+                />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#05bbbdcb" />
+
+            <corners
+                android:bottomLeftRadius="@dimen/margin_20dp"
+                android:bottomRightRadius="@dimen/margin_20dp"
+                />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#0abbbdcb" />
+            <corners
+                android:bottomLeftRadius="@dimen/margin_20dp"
+                android:bottomRightRadius="@dimen/margin_20dp"
+                />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#0fbbbdcb" />
+            <corners
+                android:bottomLeftRadius="@dimen/margin_20dp"
+                android:bottomRightRadius="@dimen/margin_20dp"
+                />
+        </shape>
+    </item>
+    <item>
+        <shape>
+
+
+            <solid android:color="#14bbbdcb" />
+
+            <corners
+                android:bottomLeftRadius="@dimen/margin_20dp"
+                android:bottomRightRadius="@dimen/margin_20dp"
+                />
+        </shape>
+    </item>
+    <!-- Background -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="360"
+                android:endColor="@color/colorPrimary"
+                android:startColor="@color/colorPrimaryDark" />
+            <corners
+                android:bottomLeftRadius="@dimen/margin_20dp"
+                android:bottomRightRadius="@dimen/margin_20dp"
+                />
+        </shape>
+    </item>
+
+</layer-list>

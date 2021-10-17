@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    tools:context=".activity.ProfileActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/txtnamelyt"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:background="@drawable/profile_curved" />
+
+        <RelativeLayout
+            android:id="@+id/lytEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtnamelyt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:background="@drawable/achievement_bg"
+            android:backgroundTint="@color/lighbackground">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_edit"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/imgLayout"
+            android:layout_width="@dimen/profile_size"
+            android:layout_height="@dimen/profile_size"
+            android:layout_above="@+id/mobilecenter"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_dp"
+            android:layout_marginBottom="@dimen/margin_dp"
+            android:background="@drawable/circle_bg"
+            android:padding="2dp">
+
+            <com.wrteam.quiz.helper.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/profile_size"
+                android:layout_height="@dimen/profile_size"
+                android:layout_margin="2dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_camera" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/txtnamelyt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mobilecenter"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_toEndOf="@+id/imgLayout">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Username"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:id="@+id/edtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvName"
+                android:background="@color/transparent"
+                android:enabled="false"
+                android:fontFamily="@font/open_sans_bold"
+                android:hint="@string/name"
+
+                android:paddingBottom="@dimen/padding_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_18" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mobilecenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtemail"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/padding_10"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/padding_10">
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mobile"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edtMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPhone"
+                android:background="@color/transparent"
+                android:enabled="false"
+                android:fontFamily="@font/open_sans_bold"
+                android:hint="@string/mobile"
+                android:inputType="phone"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_18" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/txtemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_20dp">
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEmail"
+                android:background="@color/transparent"
+                android:enabled="false"
+                android:fontFamily="@font/open_sans_bold"
+                android:hint="@string/email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_18" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/adFrameLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtemail"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/padding_10"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/padding_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/adFrameLyt"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/orange_white_bg"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:layout_marginEnd="@dimen/margin_5dp"
+                    android:onClick="UserStatistics"
+                    android:padding="@dimen/margin_dp"
+                    android:text="@string/statistics"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtsize_16" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sky_white_bg"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:onClick="LeaderBoard"
+                    android:padding="@dimen/margin_dp"
+                    android:text="@string/leaderboard"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtsize_16" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/green_white_bg"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:layout_marginEnd="@dimen/margin_5dp"
+                    android:onClick="Bookmarks"
+                    android:padding="@dimen/margin_dp"
+                    android:text="@string/bookmarks"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtsize_16" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/purple_white_bg"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:onClick="InviteFriend"
+                    android:padding="@dimen/margin_dp"
+                    android:text="@string/invite_frnd"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtsize_16" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:background="@drawable/shadow_curved"
+            android:backgroundTint="@color/lighbackground"
+            android:gravity="center"
+            android:onClick="Logout"
+            android:padding="@dimen/margin_10dp">
+
+            <ImageView
+                android:id="@+id/tvLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_logout"
+                android:drawablePadding="@dimen/margin_10dp"
+                android:padding="@dimen/margin_dp"
+                android:text="@string/logout"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

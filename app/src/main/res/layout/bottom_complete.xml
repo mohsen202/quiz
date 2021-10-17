@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bootomshit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/complete_dailog"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradientcurve_bg">
+
+        <LinearLayout
+            android:id="@+id/mainscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_result_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="@string/completed"
+                android:textColor="@color/lighbackground"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/victorymsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="@string/victory"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/victoryimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_victory" />
+
+            <LinearLayout
+                android:id="@+id/result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:minHeight="@dimen/profile_size"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/lytimgs"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_dp"
+                        android:layout_marginBottom="@dimen/padding_10"
+                        android:background="@drawable/button_bg">
+
+                        <com.wrteam.quiz.helper.CircleImageView
+                            android:id="@+id/winnerImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/wrong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/mainbtn"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:paddingTop="5dp"
+                        android:paddingRight="@dimen/padding_10"
+                        android:paddingBottom="5dp"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/winnerstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/lighbackground" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_vs"
+                        android:backgroundTint="@color/white" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/lytimges2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_dp"
+                        android:layout_marginBottom="@dimen/padding_10"
+                        android:background="@drawable/button_bg">
+
+                        <com.wrteam.quiz.helper.CircleImageView
+                            android:id="@+id/losserimage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/mainbtn"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:paddingTop="5dp"
+                        android:paddingRight="@dimen/padding_10"
+                        android:paddingBottom="5dp"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/looserstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/lighbackground" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvPlayNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainscreen"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:background="@drawable/gradientcurve_bg"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:paddingTop="@dimen/margin_dp"
+        android:paddingBottom="@dimen/margin_dp"
+        android:text="@string/re_battle"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:background="@drawable/gradientcurve_bg"
+        android:gravity="center"
+        android:paddingTop="@dimen/margin_dp"
+        android:paddingBottom="@dimen/margin_dp"
+        android:text="@string/exit"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>

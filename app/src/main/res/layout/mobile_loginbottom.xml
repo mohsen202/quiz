@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bootomshit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottomdailoggradient">
+
+        <Button
+            android:id="@+id/imgClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/margin_20dp"
+            android:background="@drawable/ic_close"
+            android:backgroundTint="@color/lighbackground"
+            android:padding="@dimen/margin_20dp" />
+
+        <TextView
+            android:id="@+id/maintxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgClose"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/padding_10"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:text="@string/sign_up_with_mobile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/lighbackground"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/maintxt"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:background="@drawable/edittext"
+            android:padding="@dimen/margin_20dp"
+            android:textColorHint="@color/gray"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/name"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:textCursorDrawable="@drawable/curser_drawable"
+                android:textSize="@dimen/mid_text"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/mobilelyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inputName"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:orientation="horizontal"
+            android:weightSum="15">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/edtCountryCodePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="10"
+                android:background="@drawable/edittext"
+                android:gravity="center_horizontal"
+                android:padding="19dp"
+                app:ccpDialog_showFastScroller="true"
+                app:ccp_contentColor="@color/black"
+                app:ccp_showArrow="false"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/maintxt"
+                android:layout_centerVertical="true"
+                android:layout_weight="5"
+                android:background="@drawable/edittext"
+                android:padding="@dimen/margin_20dp"
+                android:textColorHint="@color/gray"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_dp"
+                    android:background="@color/transparent"
+                    android:hint="@string/phone_num"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:maxLength="20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@drawable/curser_drawable"
+                    android:textSize="15sp"
+                    android:textStyle="bold">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtinputrefer"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mobilelyt"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_weight="4"
+            android:layout_marginTop="@dimen/padding_10"
+            android:background="@drawable/edittext"
+            android:padding="@dimen/margin_20dp"
+            android:textColorHint="@color/gray"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtRefer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dp"
+                android:background="@color/transparent"
+                android:hint="@string/refer"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@drawable/curser_drawable"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/emailsubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtinputrefer"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:layout_marginBottom="100dp"
+            android:layout_weight="1"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:elevation="8dp"
+            app:cardCornerRadius="30dp"
+            card_view:cardElevation="7dp"
+            card_view:cardPreventCornerOverlap="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="@dimen/padding_10"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="@dimen/padding_10"
+                android:layout_weight="1"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:padding="@dimen/padding_10"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</LinearLayout>

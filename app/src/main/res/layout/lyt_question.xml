@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/queLyt"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5dp"
+    android:layoutDirection="ltr"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardviewA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:elevation="8dp"
+        android:minHeight="200dp"
+        app:cardCornerRadius="@dimen/margin_10dp"
+        app:cardUseCompatPadding="true"
+        card_view:cardElevation="5dp"
+        card_view:cardPreventCornerOverlap="false">
+
+
+        <RelativeLayout
+            android:id="@+id/lytPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ScrollView
+                android:id="@+id/queScroll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_height"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <com.wrteam.quiz.helper.TouchImageView
+                        android:id="@+id/imgQuestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/img_height"
+                        android:layout_centerHorizontal="true"
+                        android:backgroundTint="@color/white"
+                        android:minHeight="@dimen/img_height"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imgZoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgQuestion"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/margin_10dp"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_zoom" />
+                    <TextView
+                        android:id="@+id/txtQuestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/margin_dp"
+                        android:paddingTop="@dimen/padding_10"
+                        android:layout_below="@+id/imgQuestion"
+                        android:gravity="center"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txtsize_18" />
+                </RelativeLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_tab_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:drawablePadding="@dimen/padding_10"
+    android:gravity="center_vertical"
+    android:textAlignment="center"
+    android:text="@string/self_challenge"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+    android:textColor="@color/white"
+    tools:ignore="RtlCompat" />

@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    tools:context=".activity.CompleteActivityTournaments">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/half_curved_blue">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_result_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="@string/result"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/mid_text"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/lyttop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/txtsize_20"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:id="@+id/lyt_rank2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="@dimen/margin_dp"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:visibility="invisible">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/cLyt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true">
+
+                                <RelativeLayout
+                                    android:id="@+id/lyt2"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/lb_profile_bg"
+                                    app:layout_constraintBottom_toTopOf="@id/lyt2"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.wrteam.quiz.helper.CircleImageView
+                                        android:id="@+id/img2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="4dp"
+                                        app:srcCompat="@drawable/ic_profile1" />
+
+                                </RelativeLayout>
+
+                                <ImageView
+                                    android:id="@+id/tvR2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="5dp"
+                                    android:gravity="center"
+                                    android:src="@drawable/ic_rankb"
+                                    app:layout_constraintBottom_toBottomOf="@+id/lyt2"
+                                    app:layout_constraintStart_toStartOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/txtname2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cLyt2"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:text="@string/name"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtscore2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtname2"
+                                android:gravity="center"
+                                android:text="000"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lyt_rank1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:id="@+id/crown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/crown" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/cLyt1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/crown"
+                                android:layout_centerHorizontal="true">
+
+                                <RelativeLayout
+                                    android:id="@+id/lyt1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/lb_profile_bg"
+                                    app:layout_constraintBottom_toTopOf="@id/lyt1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.wrteam.quiz.helper.CircleImageView
+                                        android:id="@+id/img1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="4dp"
+
+                                        app:srcCompat="@drawable/ic_profile" />
+                                </RelativeLayout>
+
+                                <ImageView
+                                    android:id="@+id/tvR1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:src="@drawable/ic_ranka"
+                                    app:layout_constraintBottom_toBottomOf="@+id/lyt1"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <TextView
+                                android:id="@+id/txtname1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cLyt1"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:text="@string/name"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtscore1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtname1"
+                                android:layout_marginBottom="@dimen/margin_dp"
+                                android:gravity="center"
+                                android:text="000"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lyt_rank3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:layout_weight="1"
+                            android:visibility="invisible">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/cLyt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true">
+
+                                <RelativeLayout
+                                    android:id="@+id/lyt3"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/lb_profile_bg"
+                                    app:layout_constraintBottom_toTopOf="@id/lyt3"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.wrteam.quiz.helper.CircleImageView
+                                        android:id="@+id/img3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="4dp" />
+                                </RelativeLayout>
+
+                                <ImageView
+                                    android:id="@+id/tvR3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="5dp"
+                                    android:gravity="center"
+                                    android:src="@drawable/ic_rankc"
+                                    app:layout_constraintBottom_toBottomOf="@+id/lyt3"
+                                    app:layout_constraintStart_toStartOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/txtname3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cLyt3"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:text="@string/name"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtscore3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtname3"
+                                android:gravity="center"
+                                android:text="000"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/result_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:minHeight="@dimen/profile_size"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.8"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:background="@drawable/shadow_curved"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/margin_20dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="@dimen/margin_20dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/zero"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/wrong"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="@dimen/margin_5dp"
+                                android:background="@drawable/shadow_curved"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/margin_20dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="@dimen/margin_20dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/zero"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4">
+
+                            <com.wrteam.quiz.helper.AudienceProgress
+                                android:id="@+id/result_progress"
+                                android:layout_width="@dimen/result_circle"
+                                android:layout_height="@dimen/result_circle"
+                                android:layout_centerInParent="true"
+                                app:direction="clockwise" />
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.8"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvCoin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/shadow_curved"
+                                android:drawablePadding="5dp"
+
+                                android:gravity="center"
+
+                                android:paddingLeft="@dimen/margin_20dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="@dimen/margin_20dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/zero"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvScore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/shadow_curved"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/margin_5dp"
+                                android:paddingLeft="@dimen/margin_20dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="@dimen/margin_20dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/zero"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tvPlayNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@drawable/answer_bg"
+                android:gravity="center"
+                android:onClick="PlayAgain"
+                android:paddingTop="@dimen/margin_dp"
+                android:paddingBottom="@dimen/margin_dp"
+                android:text="@string/play_again"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/answer_bg"
+                android:gravity="center"
+                android:onClick="ReviewAnswers"
+                android:paddingTop="@dimen/margin_dp"
+                android:paddingBottom="@dimen/margin_dp"
+                android:text="@string/review_answer"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/txt_color"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:weightSum="2">
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/margin_5dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:layout_weight="1"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="@dimen/margin_20dp"
+                    card_view:cardElevation="7dp"
+                    card_view:cardPreventCornerOverlap="false">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_category"
+
+                    >
+
+                <TextView
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_20dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:onClick="ShareScore"
+                    android:text="@string/share_score"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white" />
+                </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/margin_5dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:layout_weight="1"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="@dimen/margin_20dp"
+                    card_view:cardElevation="7dp"
+                    card_view:cardPreventCornerOverlap="false">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_orange"
+
+                    >
+                <TextView
+
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_20dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:onClick="RateApp"
+                    android:text="@string/rateapp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white" />
+                </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/adFrameLyt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="@dimen/padding_10" />
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/padding_15"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/padding_15"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_weight="1"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                android:elevation="8dp"
+                app:cardCornerRadius="@dimen/margin_20dp"
+                card_view:cardElevation="7dp"
+                card_view:cardPreventCornerOverlap="false">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_cat_sky"
+
+                >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="Home"
+                android:layout_gravity="center_horizontal"
+              android:padding="@dimen/margin_20dp"
+                android:text="@string/quite"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txtsize_16"
+                android:textStyle="bold"
+                android:visibility="visible" />
+            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/imgCircles"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.5"
+        android:padding="5dp"
+        android:rotation="180"
+        android:src="@drawable/trans_circle"
+        app:tint="@color/colorPrimaryDark"
+
+        />
+</RelativeLayout>

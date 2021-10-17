@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_top_corner"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_dp"
+        android:layout_marginEnd="@dimen/margin_dp">
+
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_close"
+            app:tint="@color/gray" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_dp"
+        android:gravity="center"
+        android:text="@string/enter_game_code"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/edtGameCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/circle_height"
+        android:layout_marginTop="@dimen/margin_dp"
+        android:layout_marginEnd="@dimen/circle_height"
+        android:background="@drawable/edt_bg"
+        android:gravity="center"
+        android:hint="@string/game_code"
+        android:inputType="number"
+        android:padding="@dimen/margin_10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvAlert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/dark_red" />
+    <TextView
+        android:id="@+id/tvJoinRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/option_btn_height"
+        android:layout_marginBottom="@dimen/option_btn_height"
+        android:background="@drawable/grey_curve_bg"
+        android:gravity="center"
+        android:paddingStart="@dimen/option_btn_height"
+        android:paddingTop="@dimen/padding_10"
+        android:paddingEnd="@dimen/option_btn_height"
+        android:paddingBottom="@dimen/padding_10"
+        android:text="@string/join_room"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white" />
+</LinearLayout>

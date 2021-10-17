@@ -1,0 +1,50 @@
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="colorPrimary">#54C1FF</color>
+    <color name="colorPrimaryDark">#1D6CBA</color>
+    <color name="colorAccent">#1D6CBA</color>
+    <color name="select_color">#901D6CBA</color>
+    <color name="txt_color">#020607</color>
+    <color name="right_dark">#ff7d7d</color>
+    <color name="wrong_dark">#3cd968</color>
+    <color name="red">#ff7d7d</color>
+    <color name="green">#3cd968</color>
+
+    //You can change Background color
+    <color name="bg_color">#fafcfe</color>
+
+    <color name="background_color">#ffffff</color>
+
+    <color name="gray1">#f1f1f1</color>
+    <color name="lighbackground">#CCF3F5</color>
+    <!-- background color of lifeline bg nd main page bottom bg colors -->
+    <color name="transparent">#00000000</color>
+    <color name="dark_red">#ff634e</color>
+    <color name="off_white">#f4f4f4</color>
+    <color name="gray">#808080</color>
+    <color name="light_gray">#d4d4d4</color>
+    <color name="dark_gray">#504F4F</color>
+    <color name="correct">#3cd968</color>
+    <color name="incorrect">#ff7d7d</color>
+    <color name="edt_bg">#ecf5f8</color>
+
+    <color name="purple">#9E59E1</color>
+    <color name="purple_light">#F17DC4</color>
+    <color name="sky">#439BD2</color>
+    <color name="sky_light">#73E1C0</color>
+    <color name="orange">#E37743</color>
+    <color name="orange_light">#ED9F3F</color>
+    <color name="blue">#1D6CBA</color>
+    <color name="blue_light">#54C1FF</color>
+    <color name="pink">#C40F8E</color>
+    <color name="pink_light">#FB5293</color>
+    <color name="green_">#3C8346</color>
+    <color name="green_light">#8BD188</color>
+    <color name="red_light">#93291E</color>
+    <color name="red_">#7B0D1E</color>
+
+    //You change Background color of MainScreen and LoginScreen
+    <color name="main_bg">#eeeff3</color>
+
+</resources>

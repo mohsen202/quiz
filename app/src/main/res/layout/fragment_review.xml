@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/bg_color"
+    tools:context=".fragment.ReviewFragment">
+
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <include layout="@layout/lyt_question" />
+
+            <include layout="@layout/lyt_banner_ads" />
+
+            <include layout="@layout/lyt_for_options" />
+
+
+            <RelativeLayout
+                android:id="@+id/noteLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10dp"
+                android:background="@drawable/corner_gradient_bg"
+                android:padding="@dimen/margin_10dp">
+
+                <TextView
+                    android:id="@+id/tvExtraNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="@string/extra_note"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/mid_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvExtraNote"
+                    android:text="@string/note"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/mid_text" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

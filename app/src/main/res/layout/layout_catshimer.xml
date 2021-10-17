@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cat_layout"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginStart="@dimen/margin_10dp"
+    android:layout_marginEnd="@dimen/margin_10dp">
+
+    <RelativeLayout
+        android:id="@+id/nameLyt"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10dp"
+        android:background="@drawable/card_shadow"
+
+        >
+
+        <ImageView
+            android:id="@+id/imgCircles"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/trans_circle"
+
+            android:rotation="45"
+            app:tint="@color/light_gray"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:orientation="vertical">
+
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/cateImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:src="@drawable/ic_launcher" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp">
+
+                <View
+                    android:id="@+id/item_title"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/margin_10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/title"
+                    android:background="@color/light_gray"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:maxLines="1" />
+
+
+                <View
+                    android:id="@+id/noofque"
+                    android:layout_width="70dp"
+                    android:layout_height="@dimen/margin_10dp"
+                    android:layout_below="@+id/item_title"
+                    android:background="@color/light_gray"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:textSize="14sp"
+                    android:text="@string/name"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nameLyts"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/card_shadow"
+
+        >
+
+        <ImageView
+            android:id="@+id/imgCircless"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/trans_circle"
+
+            android:rotation="45"
+            app:tint="@color/light_gray"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:orientation="vertical">
+
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/cateImgs"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:src="@drawable/ic_launcher" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp">
+
+                <View
+                    android:id="@+id/item_titles"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/margin_10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/title"
+                    android:background="@color/light_gray"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:maxLines="1" />
+
+
+                <View
+                    android:id="@+id/noofques"
+                    android:layout_width="70dp"
+                    android:layout_height="@dimen/margin_10dp"
+                    android:layout_below="@+id/item_titles"
+                    android:background="@color/light_gray"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:textSize="14sp"
+                    android:text="@string/name"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/arrows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

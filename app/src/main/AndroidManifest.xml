@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wrteam.quiz"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true" />
+
+    <application
+        android:name=".helper.AppController"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_homelogo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_homelogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".activity.InviteFriendActivity" />
+        <activity android:name=".activity.DrawerActivity" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label=""
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
+        <activity
+            android:name=".activity.InstructionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.CoinStoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".activity.BookmarkList"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PrivacyPolicy"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LeaderboardTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BookmarkPlay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TournamentPlay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ContestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PracticeQuiz"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.CompleteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LevelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SubcategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DailyCompleteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="stateAlwaysHidden"
+
+            />
+        <activity
+            android:name=".activity.NotificationList"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.UserStatistics"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.NewSelfChallengeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BattlePlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RobotPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CompleteActivityTournaments"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RewardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelfChallengeQuestion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".battle.BattleResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".battle.WaitingRoomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".battle.MultiPlayerGame"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/adAppId" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- Firebase Notifications -->
+        <service android:name=".service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.canhub.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
+    </application>
+
+</manifest>

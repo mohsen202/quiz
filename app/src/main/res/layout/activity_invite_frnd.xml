@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/invitetop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_20dp"
+                android:background="@drawable/mainscreencurved_bg">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_dp"
+                    app:srcCompat="@drawable/ic_referimage" />
+
+                <TextView
+                    android:id="@+id/referearn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/refer_amp_earn"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/txtsize_22"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/open_sans_bold" />
+
+                <LinearLayout
+                    android:id="@+id/msgLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/referearn"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txtrefercoin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txtsize_16"
+                            android:padding="5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <!--<ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lyttop"
+                android:layout_marginTop="15dp">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invitetop"
+                android:layout_margin="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_steps" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/your_refer_code"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/mid_text" />
+
+                <TextView
+                    android:id="@+id/txtcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:background="@drawable/bg_dashedborder"
+
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/light_gray"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/txtcopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_15"
+                    android:gravity="center"
+                    android:text="@string/tap_copy"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/txtinvite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:layout_marginBottom="@dimen/margin_dp"
+                    android:background="@drawable/gradientcurve_bg"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:onClick="OnInviteFrdClick"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginEnd="@dimen/margin_20dp"
+                    android:paddingTop="@dimen/margin_10dp"
+
+                    android:paddingBottom="@dimen/margin_10dp"
+                    android:text="@string/refer_now"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txtsize_22"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <!--</ScrollView>-->
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
